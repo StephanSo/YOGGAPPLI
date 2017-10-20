@@ -7,22 +7,22 @@
     tools:context="com.example.ssonn.yoggappli.MainActivity">
 
     <RelativeLayout
-        android:layout_width="368dp"
-        android:layout_height="495dp"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="9dp">
+        android:layout_width="288dp"
+        android:layout_height="331dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="6dp">
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
+            android:layout_marginLeft="32dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="37dp"
+            android:text="Posture"
             android:layout_alignParentTop="true"
-            android:layout_marginLeft="31dp"
-            android:layout_marginStart="31dp"
-            android:layout_marginTop="65dp"
-            android:text="Posture" />
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
 
         <TextView
             android:id="@+id/textView2"
@@ -38,13 +38,10 @@
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignEnd="@+id/textView2"
-            android:layout_alignRight="@+id/textView2"
-            android:layout_below="@+id/txtNbResp"
-            android:layout_marginEnd="11dp"
-            android:layout_marginRight="11dp"
-            android:layout_marginTop="53dp"
-            android:text="Choix de l'enregistrement" />
+            android:text="Choix de l'enregistrement"
+            android:layout_above="@+id/btnPrefs"
+            android:layout_toLeftOf="@+id/txtNbResp"
+            android:layout_toStartOf="@+id/txtNbResp" />
 
         <EditText
             android:id="@+id/txtPosture"
@@ -75,19 +72,20 @@
             android:id="@+id/btnPrefs"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/btnFile"
-            android:layout_alignStart="@+id/btnFile"
+            android:text="Preferences"
             android:layout_centerVertical="true"
-            android:text="Preferences" />
+            android:layout_alignLeft="@+id/btnFile"
+            android:layout_alignStart="@+id/btnFile" />
 
         <Button
             android:id="@+id/btnFile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignLeft="@+id/textView2"
-            android:layout_alignStart="@+id/textView2"
             android:layout_below="@+id/btnVoirPrefs"
-            android:text="fichier" />
+            android:text="fichier"
+            android:layout_above="@+id/btnVoirSQLite"
+            android:layout_alignLeft="@+id/textView3"
+            android:layout_alignStart="@+id/textView3" />
 
         <Button
             android:id="@+id/btnSQLite"
@@ -114,21 +112,21 @@
             android:id="@+id/btnVoirFile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/btnVoirPrefs"
             android:layout_alignLeft="@+id/btnVoirPrefs"
+            android:layout_alignRight="@+id/btnVoirPrefs"
             android:layout_alignStart="@+id/btnVoirPrefs"
             android:layout_below="@+id/btnVoirPrefs"
-            android:text="Voir Fic"
-            android:layout_alignRight="@+id/btnVoirPrefs"
-            android:layout_alignEnd="@+id/btnVoirPrefs" />
+            android:text="Voir Fic" />
 
         <Button
             android:id="@+id/btnVoirSQLite"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Voir SQLITE"
-            android:layout_below="@+id/btnVoirFile"
+            android:layout_alignEnd="@+id/btnVoirFile"
             android:layout_alignRight="@+id/btnVoirFile"
-            android:layout_alignEnd="@+id/btnVoirFile" />
+            android:layout_below="@+id/btnVoirFile"
+            android:text="Voir SQLITE" />
 
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
