@@ -1,5 +1,6 @@
 package com.example.ssonn.yoggappli;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +11,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.gson.Gson;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 import metier.Enchainement;
 
@@ -29,6 +33,8 @@ public class MainActivity extends AppCompatActivity {
 
         Button btnPrefs = (Button) findViewById(R.id.btnPrefs);
         btnPrefs.setOnClickListener(observateurClickBouton);
+        Button btnFile = (Button)findViewById(R.id.btnFile);
+        btnFile.setOnClickListener(observateurClickBouton);
     }
 
     private View.OnClickListener observateurClickBoutonVoir = new View.OnClickListener(){
@@ -76,6 +82,25 @@ public class MainActivity extends AppCompatActivity {
                           "Enregistrement effectué",
                           Toast.LENGTH_LONG).show();
                   break;
+              case R.id.btnFile:
+                  exo = new Enchainement(posture,nbResp);
+                  gson = new Gson();
+                  try {
+                      FileOutputStream fic;
+                      fic = getApplicationContext().openFileOutput("monFichier.txt",
+                              Context.MODE_APPEND);
+                      String str = gson.toJson(exo)+"\n";
+                      fic.write(str.getBytes());
+                      fic.close();
+                  } catch (IOException e) {
+                      e.printStackTrace();
+                  }
+                  Toast.makeText(getApplicationContext(),
+                          "Enregisterment effectué ",
+                          Toast.LENGTH_LONG).show();
+                  break;
+
+
           }
       }
     };
