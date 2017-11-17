@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity {
         btnVoirFiles.setOnClickListener(observateurClickBoutonVoir);
         Button btnVoirSQLite = (Button) findViewById(R.id.btnVoirSQLite);
         btnVoirSQLite.setOnClickListener(observateurClickBoutonVoir);
+        Button btnVoirImport = (Button) findViewById(R.id.btnVoirImport);
+        btnVoirImport.setOnClickListener(observateurClickBoutonVoir);
 
         Button btnPrefs = (Button) findViewById(R.id.btnPrefs);
         btnPrefs.setOnClickListener(observateurClickBouton);
@@ -55,6 +57,9 @@ public class MainActivity extends AppCompatActivity {
                     y.putExtra("ChoixMethode","SQLite");
                     startActivity(y);
                     break;
+                case R.id.btnVoirImport:
+                    Intent z = new Intent(getApplication(), ImportActivity.class);
+                    startActivity(z);
 
             }
         }
@@ -67,6 +72,24 @@ public class MainActivity extends AppCompatActivity {
           int nbResp = Integer.parseInt(nbRespEdit.getText().toString());
           switch (v.getId()){
               case R.id.btnPrefs:
+//                  ArrayList<Enchainement> list;
+//                  SharedPreferences mesPrefs;
+//                  mesPrefs = getApplicationContext().getSharedPreferences("maSeanceDeYoga", 0);
+//                  SharedPreferences.Editor monEditeur = mesPrefs.edit();
+//                  Gson gson = new Gson();
+//                  String str = mesPrefs.getString("liste","");
+//                  if(str.equals("")){
+//                      list = new ArrayList<>();
+//                  }
+//                  else{
+//                      list = gson.fromJson(str, new TypeToken<ArrayList<Enchainement>>(){}.getType());
+//                  }
+//                  Enchainement.setTousLesEnchainements(list);
+//                  Enchainement.addEnchainement(posture, nbResp);
+//                  monEditeur.putString("liste", gson.toJson(Enchainement.tousLesEnchainements));
+
+
+
                   Enchainement exo = new Enchainement(posture, nbResp);
                   SharedPreferences mesPrefs;
                   mesPrefs = getApplicationContext().getSharedPreferences("mesVarGlobales",0);

@@ -128,5 +128,15 @@
             android:layout_below="@+id/btnVoirFile"
             android:text="Voir SQLITE" />
 
+        <Button
+            android:id="@+id/btnVoirImport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/btnSQLite"
+            android:layout_toEndOf="@+id/textView"
+            android:layout_toRightOf="@+id/textView"
+            android:text="Voir Import" />
+
     </RelativeLayout>
 </android.support.constraint.ConstraintLayout>

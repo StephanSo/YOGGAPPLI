@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ssonn.yoggappli.ImportActivity">
+
+    <RelativeLayout
+        android:layout_width="325dp"
+        android:layout_height="350dp"
+        android:layout_marginLeft="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:layout_editor_absoluteY="-3dp">
+
+        <Button
+            android:id="@+id/btnImport"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/btnPref"
+            android:layout_alignStart="@+id/btnPref"
+            android:layout_below="@+id/btnPref"
+            android:layout_marginTop="29dp"
+            android:text="Import"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="261dp" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="89dp"
+            android:text="posture" />
+
+        <EditText
+            android:id="@+id/txtPosture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_toEndOf="@+id/textView4"
+            android:layout_toRightOf="@+id/textView4"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <TextView
+            android:id="@+id/TextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:layout_below="@+id/textView4"
+            android:layout_marginTop="29dp"
+            android:text="Respiration" />
+
+        <EditText
+            android:id="@+id/txtNbResp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/btnPref"
+            android:layout_toEndOf="@+id/TextView2"
+            android:layout_toRightOf="@+id/TextView2"
+            android:ems="10"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/btnPref"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TextView2"
+            android:layout_marginTop="29dp"
+            android:layout_toLeftOf="@+id/txtNbResp"
+            android:layout_toStartOf="@+id/txtNbResp"
+            android:text="Prefs" />
+
+        <Button
+            android:id="@+id/btnVoirPrefs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/txtNbResp"
+            android:layout_alignRight="@+id/txtNbResp"
+            android:layout_alignTop="@+id/btnPref"
+            android:layout_marginEnd="36dp"
+            android:layout_marginRight="36dp"
+            android:text="Voir prefs" />
+
+        <Spinner
+            android:id="@+id/spinnerPostures"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/btnImport"
+            android:layout_alignEnd="@+id/btnVoirPrefs"
+            android:layout_alignRight="@+id/btnVoirPrefs"
+            android:layout_alignTop="@+id/btnImport"
+            android:layout_toRightOf="@+id/btnImport" />
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
